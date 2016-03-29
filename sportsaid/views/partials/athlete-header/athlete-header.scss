@@ -1,0 +1,123 @@
+.module--athlete-header {
+    .container {
+        position:relative;
+    }
+    h1 {
+    	padding-bottom:44px;
+    	font-weight:bold;
+        text-align:center;
+        font-family:$lubalin-graphStd-m;
+        color:$dark-blue;
+        //  media query for ipad
+        @media screen and (max-width: $screen-sm) {
+            font-size:45px;
+            line-height:57px;
+        }
+        //  media query for ipad
+        @media screen and (max-width: $screen-sm) {
+            padding-bottom:20px;
+        }
+    }
+    .socialLinks {
+        top:134px;
+    }
+    .athleteimg {
+        //  media query for ipad
+        @media screen and (max-width: $screen-sm) {
+            padding-bottom:30px;
+        }
+    }
+    .key-info {
+        float:left;
+        width:100%;
+        padding-left:0;
+        //  media query for ipad
+        @media screen and (max-width: $screen-sm) {
+            padding-left:0;
+        }
+        li {
+            float:left;
+            width:100%;
+            list-style:none;
+            border-bottom:1px solid $lightest-gray;
+            padding:20px 0;
+            .key-block {
+                float:left;
+                width:100%;
+                padding-bottom:8px;
+                .key-head {
+                    float:left;
+                    width:30%;
+                    //  media query for mobile
+                    @media screen and (max-width: $screen-sm) {
+                        width:32%;
+                    }
+                    strong {
+                        font:22px/20px $helvetica-regular;
+                        color:$dark-gray;
+                        font-weight:bold;
+                        //  media query for ipad
+                        @media screen and (max-width: $screen-sm) {
+                            font-size:14px;
+                        }
+                    }
+                }
+                .key-content {
+                    float:left;
+                    width:70%;
+                    //  media query for mobile
+                    @media screen and (max-width: $screen-sm) {
+                        width:68%;
+                        margin:6px 0 0 0;
+                    }
+                    strong {
+                        font:22px/20px $helvetica-regular;
+                        color:$dark-gray;
+                        display:block;
+                        //  media query for ipad
+                        @media screen and (max-width: $screen-sm) {
+                            font-size:14px;
+                        }
+                        a {
+                            color:$dark-blue;
+                            font-weight:bold;
+                        }
+                    }
+                    p {
+                        font-size:14px;
+                        line-height:20px;
+                    }
+                    .lottoImg {
+                        margin: -3px 0 -10px;
+                        img {
+                            max-width:100%;
+                            max-height: 100px;
+                        }
+                    }
+                    .socialLinks-keys {
+                        float:left;
+                        padding:0;
+                        width:100%;
+                        li {
+                            float:left;
+                            width:auto;
+                            border-bottom:0;
+                            padding:0 20px 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+        li:first-child {
+            padding-top:0;
+        }
+        li:last-child {
+            border-bottom:0;
+            .key-content {
+                strong {
+                    padding-bottom:20px;
+                }
+            }
+        }
+    }
+}

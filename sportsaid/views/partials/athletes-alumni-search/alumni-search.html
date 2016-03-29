@@ -1,0 +1,81 @@
+<section class="module--athletes-alumni-search alumni" data-api="http://sportsaid-dev.azurewebsites.net/Umbraco/Api/AlumniLookUp/FilterAlumni?" data-api-params='{"length":"10"}' ng-controller="AthletesAlumniSearchCtrl">
+
+	<div class="container">
+		<h1>Our Alumni</h1>
+	</div>
+
+	<div class="grey">
+		<div class="container">
+			<h2>Find an Alumni</h2>
+			<form action="" method="post">
+
+				<div class="row">
+
+					<div class="col-lg-12">
+						
+						<div class="col-xs-12 col-sm-6 col-sm-offset-1 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
+
+							<div angucomplete-alt id="autocomplete" initial-value="q" input-changed="autocompleteChange" placeholder="Find an athlete" pause="200" selected-object="autocompleteSelect" match-class="highlight" remote-url="http://sportsaid-dev.azurewebsites.net/Umbraco/Api/AlumniLookUp/GetAlumnusNames?q=" remote-url-data-field="results" title-field="name" minlength="2" ng-enter></div>
+
+						</div>
+
+						<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+
+							<input ng-click="submitSearch()" type="submit" value="Search">
+
+						</div>
+
+						<div class="col-xs-6 col-sm-3 col-md-3 col-lg-2">
+
+							<a class="primary-button btn-reset visible-xs" ng-click="reset();" href="#/our-alumni">View All</a>
+
+						</div>	
+
+					</div>
+
+				</div>
+				
+				<a href="" ng-click="revealFilter()" class="filter primary-button">Show Filters</a>
+
+				<div class="row">
+
+					<div class="col-lg-12">
+						
+						<div class="col-sm-6 col-sm-offset-1 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2">
+							<select class="chosen-select" data-custom-dropdown data-placeholder="By sport" disabled name="sport" ng-change="submitFilter()" ng-model="sport" ng-options="c.id as c.label for c in sportItems">	
+								<!--<option value="" disabled selected>By Sport</option>-->
+							</select>
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
+							<a class="primary-button btn-reset view-all hidden-xs" href="" ng-click="reset()">View All</a>
+						</div>												
+					</div>
+				</div>
+				
+			</form>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12" ng-show="resultsRemaining === 0 && !results.length" >
+				<p>No results, please try a different search.</p>
+			</div>
+			<div class="col-lg-12">
+	            <figure ng-repeat="item in results">
+	                <a href="#"><img ng-src="http://sportsaid-dev.azurewebsites.net{{item.image_url}}?width=220&crop=0,0,220,220" alt="{{item.name}}"></a>
+	                <h3><a href="" ng-bind="item.name"></a></h3>
+	                <p ng-bind="item.sport_name"></p>
+	            </figure>
+	        </div>
+	    </div>
+
+        <div class="row" ng-show="resultsRemaining > 0">
+            <div class="col-lg-12">
+                <a href="" class="primary-button" id="load-more-btn" ng-click="loadMore($event)"><span class="original-text">Load more</span><img src="../assets/images/ajax-loader.gif" class="loader-image"></a>
+            </div>
+        </div>
+
+	</div>
+
+</section>

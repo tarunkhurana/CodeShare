@@ -1,0 +1,215 @@
+.module--calendar-vertical {
+	padding-top:0;
+	background: $light-gray;
+	.upcoming-calendar-info{
+		width: 100%;
+		float:left;
+		background:$light-gray;
+		padding: 50px 0 50px 0;
+		// Tablet
+		@media screen and (min-width:$screen-sm) {
+			padding: 50px 0 30px 0;
+		}
+		// Mobile
+		@media screen and (max-width:$screen-sm) {
+			padding: 50px 0 30px 0;
+		}
+		h2{
+			text-align:center;
+			font-weight: bold;
+			text-transform:uppercase;
+			margin-top:0;
+			margin-bottom:10px;
+		}
+	}
+	.gray-row{
+		width: 100%;
+		float:left;
+		background:#efefef;
+		border-top:2px solid $white;
+		// Mobile
+		@media screen and (max-width:$screen-sm) {
+			padding:15px 0 15px 0;
+			text-align:center;
+		}
+		// Tablet
+		@media screen and (min-width:$screen-sm) {
+			padding:30px 0 0 0;
+		}
+		// Desktop
+		@media screen and (min-width:$screen-lg) {
+			padding:0;
+		}
+		.event-pic{
+			width: 100%;
+			float:left;
+			figure{
+				width: 100%;
+        min-height: 213px;
+        @media screen and (max-width: 320px){
+           min-height: 163px;
+        }
+				img{
+					max-width: 380px;
+					width: 100%;
+					max-height: 213px;
+				}
+			}
+		}
+		.event-date{
+			float:left;
+			text-align:left;
+			position:relative;
+			// Mobile
+			@media screen and (max-width:$screen-sm) {
+				display: inline-block;
+				text-align:center;
+				float: none;
+			}
+			// Tablet
+			@media screen and (min-width:$screen-sm) {
+				width:100%;
+				margin-top:0px;
+			}
+			// Desktop
+			@media screen and (min-width:$screen-lg) {
+				width: 70%;
+				left:15%;
+				margin-top:10px;
+			}
+			h4{
+				font:100px/100px $lubalin-graphStd-m;
+				font-weight: bold;
+				color:$dark-gray;
+				float:left;
+				// Mobile
+				@media screen and (max-width:$screen-sm) {
+					float:left;
+				}
+				// Tablet
+				@media screen and (min-width:$screen-sm) {
+					font-size: 79px;
+					line-height: 30px;
+					padding-top:10px;
+				}
+				// Desktop
+				@media screen and (min-width:$screen-lg) {
+					font-size: 100px;
+					line-height: 100px;
+					padding-top:0;
+				}
+			}
+			small{
+				font:24px/32px $helvetica-regular;
+				color:$dark-gray;
+				position:relative;
+				// Mobile
+				@media screen and (max-width:$screen-sm) {
+					margin-top: 13px;
+					top: 33px;
+					left: 10px;
+					text-align:left;
+					display: inline-block;
+				}
+				// Tablet
+				@media screen and (min-width:$screen-sm) {
+					font-size: 19px;
+					line-height: 23px;
+					top: 20px;
+					left: 10px;
+				}
+				// Desktop
+				@media screen and (min-width:$screen-lg) {
+					position:relative;
+					top: -20px;
+					left: 0;
+					font-size: 24px;
+					line-height: 32px;
+				}
+				span{
+					display: block;
+				}
+			}
+		}
+		.event-description{
+			width: 100%;
+			float:left;
+			text-align:left;
+			position:relative;
+            margin-top: 10px;
+            margin-bottom: 25px;
+			// Tablet
+			@media screen and (min-width:$screen-sm) {
+				padding-top:15px;
+			}
+			// Desktop
+			@media screen and (min-width:$screen-lg) {
+				padding-top:10px;
+
+			}
+			h5{
+				font:15px/22px $helvetica-bold;
+				// Mobile
+				@media screen and (max-width:$screen-sm) {
+					text-align:center;
+				}
+				// Tablet
+				@media screen and (min-width:$screen-sm) {
+					font-size:18px;
+					line-height: 26px;
+				}
+				span{
+					display: block;
+					font:13px/20px $helvetica-regular;
+					// Mobile
+					@media screen and (max-width:$screen-sm) {
+						text-align:center;
+						font:15px/20px $helvetica-regular;
+					}
+					// Tablet
+					@media screen and (min-width:$screen-sm) {
+						font-size:18px;
+						line-height: 26px;
+					}
+				}
+			}
+			p{
+				font:15px/22px $helvetica-regular;
+				// Mobile
+				@media screen and (max-width:$screen-sm) {
+					text-align:center;
+				}
+				// Tablet
+				@media screen and (min-width:$screen-sm) {
+					font-size:18px;
+					line-height: 26px;
+				}
+			}
+		}
+	}
+	.white-row{
+		background:$light-gray;
+	}
+	.event-button{
+		border-top:2px solid $white;
+		padding: 30px 0;
+		width: 100%;
+		display: inline-block;
+
+		// Mobile
+		@media screen and (max-width:$screen-sm) {
+			float: none;
+			display: inline-block;
+			text-align: center;
+		}
+
+	}
+	.row {
+		text-align: center;
+	}
+	.primary-button {
+		@media screen and (max-width:400px){
+			line-height:30px;
+		}
+	}
+}

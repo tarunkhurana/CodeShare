@@ -1,0 +1,128 @@
+.module--carousel {
+	text-align: center;
+
+	/* SLIDES
+	--------------------------- */
+	.slick-slide {
+		outline:none;
+
+		img,
+		iframe {
+			width:100%;
+		}
+	}
+	.caption {
+		margin-top: 20px;
+	}
+
+	/* ARROWS
+	--------------------------- */
+	.slick-arrow {
+		background-color:#fff;
+		background-repeat:no-repeat;
+		background-position:center center;
+		height:40px;
+		opacity:.8;
+		width:40px;
+		z-index:1;
+
+		&:hover {
+			opacity:1;
+		}
+		&::before {
+			content:none!important;
+		}
+		@media screen and(min-width:$screen-sm){
+			height:60px;
+			width:60px;
+		}
+	}
+	.slick-prev {
+		background-image:url('#{$path-asset}/images/icons/btn-prev.png');
+		border-radius:0 3px 3px 0;
+		left:0;
+	}
+	.slick-next {
+		background-image:url('#{$path-asset}/images/icons/btn-next.png');
+		border-radius:3px 0 0 3px;
+		right:0;
+	}
+
+	/* CAROUSEL WITH CAPTION
+	--------------------------- */
+	&.carousel-with-caption .container {
+		display:none;
+		margin:0 auto;
+		width:50%;
+
+		@media screen and(min-width:$screen-sm){
+			display:block;
+		}
+		.slick-slide {
+			@include transition(opacity 300ms linear);
+			opacity:1;
+
+			&.in {
+				opacity:1;
+			}
+		}
+		.caption {
+			@include transition(opacity 300ms linear);
+			border-left:1px solid #999;
+			opacity:0;
+			padding-left:30px;
+
+			&.in {
+				opacity:1;
+			}
+		}
+	}
+
+	/* CAROUSEL WITH TAGS
+	--------------------------- */
+	&.carousel-with-tags {
+
+		.slick-slide {
+			@include transition(opacity 300ms linear);
+			opacity:1;
+
+			&.in {
+				opacity:1;
+			}
+		}
+		.caption,
+		.tags {
+			@include transition(opacity 300ms linear);
+			margin:0 auto;
+			opacity:0;
+			width:50%;
+
+			&.in {
+				opacity:1;
+			}
+		}
+		.caption {
+			text-align:center;
+		}
+		.tags {
+			border-bottom:1px solid $lightest-gray;
+			border-top:1px solid $lightest-gray;
+			display:none;
+			margin-top:30px;
+			padding:20px 0 10px 0;
+
+			h3 {
+				margin-top:0;
+			}
+		}
+		@media screen and(min-width:$screen-sm){
+
+			.slick-slide {
+				opacity:.5;
+			}
+			.tags {
+				display:block;
+			}
+		}
+	}
+}

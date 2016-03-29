@@ -1,0 +1,96 @@
+<div class="div_main">
+    <div class="input clearfix" ng-show="{{isCart}}">
+
+        <input class="box box_1" type="text" data-ng-disabled="wip" placeholder="Enter Your Discount Code">
+
+
+        <button class="div_2 apply button" data-ng-disabled="wip">APPLY</button>
+
+
+    </div>
+
+    <hr class="line">
+    <h2 class="summ"> <!-- header tag used for SEO semantics: http://www.hobo-web.co.uk/headers/ -->
+        {{summaryText}}
+    </h2>
+    <hr class="line">
+
+    <table class="tab">
+        <tr>
+            <td class="pay">Sub Total before Shipping</td>
+
+            <td class="pay_2">
+
+            </td>
+            <td class="pay_1">
+                {{total}}
+            </td>
+        </tr>
+        <tr data-ng-class="{'line-through': wip}">
+            <td class="pay"> Including Tax
+            </td>
+
+            <td class="pay_2">
+
+            </td>
+            <td class="pay_1">
+                0
+            </td>
+        </tr>
+        <tr data-ng-class="{'line-through': wip}">
+            <td class="pay">Get 2% off
+            </td>
+            <td class="pay_2">
+
+            </td>
+            <td class="pay_1">
+                0
+            </td>
+        </tr>
+        <tr class="total">
+            <td class="pay2">
+                Payable Amount
+            </td>
+
+
+            <td class="pay3">
+            </td>
+            <td class="pay4">
+                {{total}}
+            </td>
+
+        </tr>
+    </table>
+
+    <button class="button button-assertive place-order" ng-click="submitOrder()" ng-show="{{isCart}}">PLACE ORDER
+    </button>
+    <a class="button button-assertive place-order" href="#/app/payment" ng-hide="{{isCart}}">Continue Checkout
+    </a>
+
+
+    <div class="pic">
+        <div class="col">
+            <img src="img/car_1.png" class="image" alt="" title="">
+
+            <div class="i5">
+                Free shipping on prepaid order
+            </div>
+        </div>
+
+        <div class="col">
+            <img src="img/money.png" class="image" alt="" title="">
+
+            <div class="i5">
+                Cash on Delivery
+            </div>
+        </div>
+
+        <div class="col">
+            <img src="img/tick_1.png" class="image" alt="" title="">
+
+            <div class="i5">
+                0% interest option
+            </div>
+        </div>
+    </div>
+</div>

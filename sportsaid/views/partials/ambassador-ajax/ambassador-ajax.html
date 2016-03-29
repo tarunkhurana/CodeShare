@@ -1,0 +1,31 @@
+<section class="module--ambassador-ajax" data-api="http://sportsaid-dev.azurewebsites.net/umbraco/api/AmbassadorLookUp/GetAmbassadorLookup?" data-api-params='{"length":"0","skip":"0"}' ng-controller="AmbassadorAjaxCtrl">
+
+	<div class="container">
+
+		<figure class="" ng-repeat="item in ambassador" data-reveal-item>
+
+			<a href="#"> 
+				<img data-ng-src="http://sportsaid-dev.azurewebsites.net{{item.image_url}}?height=280&width=280">
+			</a>
+
+			<h3><a href="">{{item.name}}</a></h3>
+
+		</figure>
+
+	</div>
+
+	<div class="container">
+
+		<div class="row">
+
+			<div class="col-lg-12">
+
+				<a href="" class="primary-button" id="ambassador-load-more" ng-click="loadMore($event)" ng-show="showLoadMore"><span class="original-text">Load more</span><img src="../assets/images/ajax-loader.gif" class="loader-image"></a>
+
+			</div>
+
+		</div>
+
+	</div>
+
+</section>

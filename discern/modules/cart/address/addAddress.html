@@ -1,0 +1,59 @@
+<ion-view view-title="address" hide-back-button='true' >
+    <ion-content on-scroll="scrolling=true"  overflow-scroll="true">
+        <section class="billingAddress">
+            <h2 ng-click='addAdds()'>Add new address</h2>
+
+           <form ng-submit= 'addAddress()'>
+                <input type="text" class="box" placeholder="Name"  ng-model="addressField.name"  >
+                <input type="email" class="box" placeholder="Email" ng-model="addressField.email" >
+                <input type="text" class="box" placeholder="Company" ng-model="addressField.company" >
+                <input type="text" class="box" placeholder="MobileNo" ng-model="addressField.mobile" >
+                <select class="box1"  ng-model="addressField.state">
+                    <option value="" selected="selected">Select State</option>
+                    <option value="AP">Andhra Pradesh</option>
+                    <option value="AR">Arunachal Pradesh</option>
+                    <option value="AS">Assam</option>
+                    <option value="BR">Bihar</option>
+                    <option value="CT">Chhattisgarh</option>
+                    <option value="DD">Daman &amp; Diu</option>
+                    <option value="DN">Dadra &amp; Nagar Haveli</option>
+                    <option value="GA">Goa</option>
+                    <option value="GJ">Gujarat</option>
+                    <option value="HP">Himachal Pradesh</option>
+                    <option value="HR">Haryana</option>
+                    <option value="JH">Jharkhand</option>
+                    <option value="JK">Jammu &amp; Kashmir</option>
+                    <option value="KA">Karnataka</option>
+                    <option value="KL">Kerala</option>
+                    <option value="MH">Maharashtra</option>
+                    <option value="MN">Manipur</option>
+                    <option value="ML">Meghalaya</option>
+                    <option value="MP">Madhya Pradesh</option>
+                    <option value="MZ">Mizoram</option>
+                    <option value="NL">Nagaland</option>
+                    <option value="OR">Odisha</option>
+                    <option value="PB">Punjab</option>
+                    <option value="RJ">Rajasthan</option>
+                    <option value="SK">Sikkim</option>
+                    <option value="TN">Tamil Nadu</option>
+                    <option value="TG">Telangana</option>
+                    <option value="TR">Tripura</option>
+                    <option value="UP">Uttar Pradesh</option>
+                    <option value="UT">Uttarakhand</option>
+                    <option value="WB">West Bengal</option>
+                 
+                    <option value="AN">Andaman &amp; Nicobar</option>
+                    <option value="CH">Chandigarh</option>
+                    <option value="DL">Delhi</option>
+                    <option value="LD">Lakshadweep</option>
+                    <option value="PY">Puducherry</option>
+                </select>
+                <input type="text" class="box" placeholder="City" ng-model="addressField.city"  >
+                <textarea placeholder="Address" rows="4" cols="4" class="box" ng-model="addressField.address" ></textarea>
+                <input type="text" class="box" placeholder="Zip code" ng-model="addressField.zip" >
+          
+                <button class="button button-block  button-dark buttonActive saveButton" type="submit" >Save</button>
+            </form>
+        </section>
+    </ion-content>
+</ion-view>

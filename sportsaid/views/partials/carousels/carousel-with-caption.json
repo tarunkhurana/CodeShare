@@ -1,0 +1,99 @@
+{
+	"totalSlides": 15,	
+	"slides": [
+	{
+		"caption": "Xinibus purus non, mollis neque. Fusce at risus vitae leo finibus elementum viverra eget dui. Nullam dui felis, vehicula ac ante vitae, scelerisque po",		
+		"mediaId": 1,
+		"mediaSrc": "http://fillmurray.com/2400/600",
+		"tags": [
+			{
+				"tagName": "apple",
+				"tagUrl": "http://apple.co"
+			},
+			{
+				"tagName": "banana",
+				"tagUrl": "http://banana.co"
+			},
+			{
+				"tagName": "peach",
+				"tagUrl": "http://peach.co"
+			}
+		]	
+	},
+	{
+		"caption": "Tortor eget finibus. Mauris fermentum diam at libero pulvinar, nec aliquam metus ullamcorper. Nullam iaculis pretiu",		
+		"mediaId": 2,
+		"mediaSrc": "http://placebear.com/2400/600",
+		"tags": [
+			{
+				"tagName": "pink",
+				"tagUrl": "http://google.co"
+			},
+			{
+				"tagName": "orange",
+				"tagUrl": "http://yahoo.co"
+			},
+			{
+				"tagName": "green",
+				"tagUrl": "http://msn.co"
+			}
+		]	
+	},
+	{
+		"caption": "Fusce at risus vitae leo finibus elementum viverra eget dui. Nullam dui felis, vehicula ac ante vitae, scelerisque po",		
+		"mediaId": 3,
+		"mediaSrc": "http://placehold.it/2400x600&text=apples",
+		"tags": [
+			{
+				"tagName": "apple",
+				"tagUrl": "http://apple.co"
+			},
+			{
+				"tagName": "banana",
+				"tagUrl": "http://banana.co"
+			},
+			{
+				"tagName": "peach",
+				"tagUrl": "http://peach.co"
+			}
+		]	
+	},
+	{
+		"caption": "Nullam iaculis pretiu tortor eget finibus. Mauris fermentum diam at libero pulvinar, nec aliquam metus ullamcorper.",		
+		"mediaId": 4,
+		"mediaSrc": "http://placehold.it/2400x600&text=bananas",
+		"tags": [
+			{
+				"tagName": "pink",
+				"tagUrl": "http://google.co"
+			},
+			{
+				"tagName": "orange",
+				"tagUrl": "http://yahoo.co"
+			},
+			{
+				"tagName": "green",
+				"tagUrl": "http://msn.co"
+			}
+		]	
+	},
+	{
+		"caption": "Vehicula at risus vitae leo finibus elementum viverra eget dui. Nullam dui felis,  ac ante vitae, scelerisque po",		
+		"mediaId": 5,
+		"mediaSrc": "http://placehold.it/2400x600&text=pears",
+		"tags": [
+			{
+				"tagName": "apple",
+				"tagUrl": "http://apple.co"
+			},
+			{
+				"tagName": "banana",
+				"tagUrl": "http://banana.co"
+			},
+			{
+				"tagName": "peach",
+				"tagUrl": "http://peach.co"
+			}
+		]	
+	}]
+}

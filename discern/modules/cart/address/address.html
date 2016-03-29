@@ -1,0 +1,68 @@
+<ion-view view-title="address" hide-back-button='true'>
+    <ion-content on-scroll="scrolling=true">
+        <section class="addressDeliver">
+            <h2>select delivery address</h2>
+            <div class="userAddress " ng-click="toggleGroup({{item.profile_id}})" ng-class="{selectedAddress: isGroupShown({{item.profile_id}})}" ng-repeat='item in itemsAddress'>
+                <div class="nameDeliver ">
+                    {{item.name}}
+                    <!--  Gautam (Default) -->
+                </div>
+                <address>
+                    {{item.address}}
+                    <br> {{item.city}} - {{item.zipcode}}
+                    <br> Mobile No : {{item.mobile}}
+                    <!--  R-109, Third FLoor <br> Saket South Delhi - 110017 <br>Mobile No : 9855389220 -->
+                </address>
+                <div class="notesDelivery">
+                    <ul>
+                        <li>Cash on Deliver available </li>
+                        <li>8-10 days by standard delivery</li>
+                    </ul>
+                </div>
+                <div class="actionBtn">
+                    <div class="row">
+                        <div class="col">
+                            <div class="removeAddress" ng-click='removeAddress({{item.profile_id}})'>Remove</div>
+                        </div>
+                        <div class="col">
+                            <div class="editAddress" ui-sref='app.editaddress({profileId:item.profile_id,name:item.name,email:item.email,company:item.company,mobile:item.mobile,state:item.state,city:item.city,address:item.address,zip:item.zipcode})' >Edit Address</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  <div class="userAddress selectedAddress">
+             <div class="nameDeliver ">
+                    Gautam (Default)
+                </div>
+                <address>
+                    R-109, Third FLoor <br> Saket South Delhi - 110017 <br>Mobile No : 9855389220
+                </address>
+                <div class="notesDelivery">
+                    <ul>
+                        <li>Cash on Deliver available </li>
+                        <li>8-10 days by sytandard delivery</li>
+                    </ul>
+                </div>
+
+                <div class="actionBtn">
+                <div class="row">
+                    <div class="col">
+                          <div class="removeAddress">Remove</div>
+                    </div>
+                    <div class="col">
+                         <div class="editAddress">Edit Address</div>
+                    </div>
+                </div>
+                  
+                   
+                </div>
+            </div> -->
+            <a href="#/app/addaddress">
+                <div class="userAddress newAddress">
+                    <p>Add New Address</p>
+                </div>
+            </a>
+        </section>
+        <div ng-include="'modules/cart/summary/summary.html'" ng-controller="CartSummaryCtrl" class="cart-summary-wrapper"></div>
+    </ion-content>
+</ion-view>

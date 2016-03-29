@@ -1,0 +1,63 @@
+<ion-view view-title="DISCOVER" hide-back-button='true'>
+    <ion-content class='discoverBg' lazy-scroll overflow-scroll="true">
+        <!--  <div class="productSlider "> 
+<ion-slide-box show-pager='false'>
+  <ion-slide>
+    <div class="box blue"><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1><h1>BLUE</h1></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box yellow"><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1><h1>YELLOW</h1></div>
+  </ion-slide>
+  <ion-slide>
+    <div class="box pink"><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1><h1>PINK</h1></div>
+  </ion-slide>
+</ion-slide-box>
+</div> -->
+        <div class="wrapper">
+            <div class="content bubbles ">
+                  <div ng-include="'modules/userPersona/user-persona.html'" ng-controller="userPersonaCtrl" class="persona">
+                </div>
+                <!-- <div class="persona">
+                    <div class='playAgain' ng-click='playQuiz()'>
+                        Play Again
+                        <img src="img/play-again.png" alt="">
+                    </div>
+                    <section class="bubblePersona"  id='major'>
+                        <img src="img/glamour-quiz.png" alt="">
+                    </section>
+                    <section class="bubblePersona"  id='minor'>
+                        <img src="img/classic-quiz.png" alt="">
+                    </section>
+                    <section class='userImage bubblePersona'>
+                        <div class="userHolder" style="background-image:url(img/bandana-banner.jpg)">
+                        </div>
+                    </section>
+                </div> -->
+                <section class="resultView">
+                    <p>Lorem ipsum dolor sit amet, consectetur elit. Proin neque massa, placerat et lacus quis.</p> <a href="#" class="get-look" ng-click='activeOverlay()'>DISCOVER</a>
+                </section>
+            </div>
+            <!--   <div class="content">
+                <article class="style">
+                      <img src="img/d-logo.png" alt="" title="" class="dlogo">
+                      <img src="img/what-style.png" alt="" class="dlogo">
+                    <p>We designed a quiz to find out the style of your inner interior designer and architect. Are you a Mid-Century lover or are you Boho-Chic?
+Do you have the ultimate bachelor pad or is your home an eclectic mash-up?  Take this fun quiz to find out what’s your style.</p>
+                    <a class="start_button" href="#/app/discover-product">START THE QUIZ!</a>
+                </article>
+            </div> -->
+        </div>
+    </ion-content>
+    <div class="overlay" ng-class="{'active': isActive}" ng-click="activeOverlay()"></div>
+    <div class="popup " ng-class="{'active': isActive}">
+        <h6>Which Space would you
+like to shop for ?</h6>
+        <nav class="popup_links">
+            <ul>
+                <li><a class="living" ng-click="activeSpace(77)">LIVING room</a></li>
+                <li><a class="dining" ng-click="activeSpace(78)">dining room</a></li>
+                <li><a class="bedroom" ng-click="activeSpace(79)">BEDROOM</a></li>
+            </ul>
+        </nav>
+    </div>
+</ion-view>

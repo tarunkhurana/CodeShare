@@ -1,0 +1,35 @@
+<ion-view view-title="address" hide-back-button='true'>
+    <ion-content on-scroll="scrolling=true">
+        <section class="paymentPage">
+            <h2>  CHOOSE PAYMENT MODE</h2>
+            <div class="shadow1">
+                <div class="pay_arrow" ng-click="toggleGroup(1)" ng-class="{active: isGroupShown(1)}">
+                    <div class="payu">
+                        PAYU
+                    </div>
+                    <p> PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU PAYU</p>
+                </div>
+            </div>
+            <div class="shadow1">
+                <div class="pay_arrow " ng-click="toggleGroup(2)" ng-class="{active: isGroupShown(2)}">
+                    <div class="payu ">
+                        CASH ON DELIVERY (COD)
+                    </div>
+                    <p>Cash On Delivery Pay with cash when your order is delivered </p>
+                    <div class="row">
+                        <div class="col capcha_image"  ng-bind='txtCaptcha' >
+                            <!-- <img src="img/capcha.png" class="capcha_image" alt="" title=""> -->
+                        </div>
+                        <div class="col">
+                            <div class="changeCaptcha" ng-click='DrawCaptcha()'>Change Image</div>
+                        </div>
+                    </div>
+                    <input type="text" class="box" placeholder="Enter the text as shown in the above image" ng-click='$event.stopPropagation()'  ng-model='objCaptcha.txtInput' >
+                     <!-- <input id="Button1" type="button" value="Check" ng-click="ValidCaptcha()"/> -->
+                </div>
+            </div>
+        </section>
+        <div class="boxTopShadow"></div>
+        <div ng-include="'modules/cart/summary/summary.html'" ng-controller="CartSummaryCtrl" class="cart-summary-wrapper"></div>
+    </ion-content>
+</ion-view>

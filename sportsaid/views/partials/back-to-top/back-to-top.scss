@@ -1,0 +1,18 @@
+.module--back-to-top {
+    border-top:1px solid $lightest-gray;
+    padding-top:0;
+    text-align:center;
+
+    .back {      
+        background:url($path-asset+'images/icons/back.png') no-repeat;        
+        background-position:center center;
+        background-size:33px 33px;
+        padding: 80px 0 0 0;
+        display: inline-block;
+        color:$dark-gray;
+        width:98%;        
+        &:hover {
+            color:$dark-gray;
+        }
+    }
+}

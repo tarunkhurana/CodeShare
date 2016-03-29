@@ -1,0 +1,165 @@
+.module--athletes-alumni-search {
+	text-align:center;
+	padding: 0 0 50px 0;
+	h1 {
+		margin-bottom: 60px;
+	}
+	/* SEARCH
+	-------------------- */
+	.col {
+		padding:0;
+	}
+	.grey {
+		background: $light-gray;
+		padding: 100px 0;
+		margin-bottom: 40px;
+		h2 {
+			margin-top: 0;
+		}
+	}
+	input[type="text"],
+	input[type="submit"]{
+		margin-bottom:0;
+		@media screen and (min-width:$screen-sm){
+			margin-top:15px;
+		}
+	}
+	.btn-reset {
+		display:block;
+		margin:15px 0 0 0;
+		@media screen and (max-width:$screen-sm){
+			padding:2px 0px;
+			font-size:14px;
+		}
+		@media screen and (max-width:$screen-xs){
+			font-size:14px;
+		}
+	}
+	.view-all {
+		margin: 20px 0 0 0;
+	}
+	.chosen-container {
+	   margin-top:20px;
+	}
+	@media screen and (min-width:$screen-sm){
+
+		ul {
+			border:1px solid #ccc;
+			margin:0;
+			padding:0;
+
+			li {
+				list-style-type:none;
+			}
+			a {
+				background-color:#fff;
+				display:block;
+				padding:5px 10px;
+				text-align:left;
+			}
+			li:nth-of-type(even) a {
+				background-color:#f4f4f4;
+			}
+		}
+	}
+	a.filter {
+        width: calc(100% - 30px);
+
+        @media (min-width: $screen-md) {
+            display: none;
+        }
+    }
+    h3.filter-heading {
+		margin-top:0;
+	}
+    #filter {
+    	position:relative;
+        width: 100%;
+
+    	@media screen and (max-width: $screen-md){
+
+    		h3 {
+	    		display:none;
+	    	}
+            .filter-wrapper {
+                @include transition(left 0ms linear);
+                left:-2000%;
+                position:absolute;
+                z-index:1;
+                display: block;
+                background:$light-gray;
+                padding-bottom: 10px;
+
+                &.in {
+                    bottom:0;
+                    left:0;
+                    top:0;
+                    right:0;
+
+                    .row {
+                        margin:0;
+                    }
+                    .chosen-container {
+                        width:100%!important;
+                    }
+                }
+            }
+            .bg-white {
+                background:$light-gray;
+                margin-top: 10px;
+            }
+        }
+    }
+
+	/* RESULTS
+	-------------------- */
+	.item-results {
+		@include transition(opacity 300ms linear);
+		opacity:1;
+
+		&.cloak {
+			opacity:0
+		}
+	}
+    figure {
+		float:left;
+        margin-bottom:30px;
+        padding:0 15px;
+        min-height:250px;
+        width:50%;
+
+		@media screen and (min-width:$screen-sm){
+			width:33.33%;
+			min-height: 350px;
+		}
+		@media screen and (min-width:$screen-md){
+			width:25%;
+			min-height: 350px;
+		}
+		@media screen and (min-width:$screen-lg){
+			width:20%;
+			min-height: 350px;
+		}        
+        img {
+            width:100%;
+            height:auto;
+        }
+		h3,
+		p {
+			font-size: 16px;
+
+			@media screen and (min-width:$screen-sm){
+				font-size: 20px;
+				text-align:left;
+			}
+		}
+		h3 {
+			color: $dark-blue;
+			font-weight: bold;
+			margin: 10px 0 0 0;
+		}
+		> a {
+			display:block;
+		}
+    }
+}

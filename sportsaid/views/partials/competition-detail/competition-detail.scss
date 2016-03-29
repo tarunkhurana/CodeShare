@@ -1,0 +1,147 @@
+.module--competition-detail {
+    text-align: center;
+    background: white;
+    h2 {
+        padding:0 0 45px 0;
+        margin:0;
+        font-size:72px;
+        line-height:74px;
+        @media screen and (max-width: $screen-lg) {
+            font-size:57px;
+            line-height:57px; 
+        }
+        @media screen and (max-width: $screen-md) {
+            font-size:34px;
+            line-height:36px; 
+        }
+        @media screen and (max-width: $screen-sm) {
+            font-size:25px;
+            line-height:26px; 
+        }
+    }
+    figure {
+        padding-bottom: 20px;
+        img {
+            width: 100%;
+        }
+    }
+    // Top border
+    .competition-detail-wrap {
+        width: 100%;
+        .competition-detail-container {
+            text-align: center;
+            .col-gap {
+                margin-bottom: 50px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                @media screen and (min-width: $screen-lg) {
+                    margin-bottom: 0;
+                }
+                h4 {
+                    margin: 0 0 10px 0;
+                }
+                p {
+                    font-size: 24px;
+                    margin: 0 0 10px 0;
+                    &:nth-child(3n) {
+                        margin: 0 0 10px 0;
+                    }
+                    &:nth-child(4) {
+                    	&::before {
+							content: "-";
+							display: block;
+							margin: 10px 0;
+                        }
+                    }
+                    span {
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .sports {
+                padding: 20px;
+                text-align: center;
+                .third {
+                    width: 33%;
+                    margin: 30px 0;
+                    display: inline-block;
+                    @media screen and (max-width: $screen-md) {
+                        width: 163px;
+                    }
+                    .image-container {
+                        min-height: 163px;
+                        h4 {
+                            font-size: 20px;
+                            color: $dark-blue;
+                            width: 100%;
+                            text-align: center;
+                        }
+                        img {
+                            max-height: 163px;
+                            @media screen and (max-width: $screen-md) {
+                                width: 85%;
+                            }
+                        }
+                    }
+                }
+                img {
+                    max-width:100%;
+                }
+            }
+            .details {
+                padding: 50px 0;
+                border-top: 1px solid $lightest-gray;
+                h4 {
+                    line-height: 24px;
+                }
+            }
+            .infos {
+                padding-top: 40px;
+                border-top: 1px solid $lightest-gray;
+                h2 {
+                    margin-bottom: 40px;
+                    padding: 0;
+                    font-size:34px;
+                    line-height:36px;
+                    @media screen and (max-width: $screen-lg) {
+                        font-size:34px;
+                        line-height:36px;  
+                    }
+                    @media screen and (max-width: $screen-md) {
+                        font-size:32px;
+                        line-height:34px; 
+                    }
+                    @media screen and (max-width: $screen-sm) {
+                        font-size:25px;
+                        line-height:26px; 
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    padding: 0;
+                    color: $dark-gray;
+                    a {
+                        color: $dark-blue;
+                        vertical-align: super;
+                    }
+                    &.calendar:before {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            .calendar {
+                a {
+                    vertical-align: super;
+                    background: url($path-asset+"images/event-detail/calendar.png") no-repeat left top;
+                    padding:3px 0 3px 35px;
+                    display:inline;
+                }
+            }
+        }
+        .gap {
+            padding-top: 25px;
+        }
+    }
+}

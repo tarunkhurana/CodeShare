@@ -1,0 +1,49 @@
+.module--ambassador-ajax {
+	text-align:center;
+
+	figure {		
+		@include transition(opacity 300ms linear);
+		float:left;
+        min-height:200px;
+        margin-bottom:30px;
+        opacity:0;
+        padding:0 10px;
+        width:49%; 
+        
+        @media screen and (min-width:$screen-sm){
+			width:33.33%;			
+		}
+		@media screen and (min-width:$screen-md){
+			width:25%;
+			margin-bottom:30px;			
+		}
+		@media screen and (min-width:$screen-lg){
+			width:20%;
+			min-height:280px;		
+		}       
+        &.in {
+			opacity:1;
+		}		
+        > a {
+        	display:block;
+
+        }
+		h3 {
+			font-size: 16px;
+			margin: 10px 0 0 0;
+			a{
+				color:$dark-blue;
+			}
+			@media screen and (min-width:$screen-sm){
+				text-align:left;
+			}
+		}
+	  	img {
+        	width:100%;
+
+            @media screen and (min-width:$screen-lg){
+               
+            }
+      	}
+    }
+}

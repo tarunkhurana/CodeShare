@@ -1,0 +1,146 @@
+<ion-view view-title="MODEL RECOMENDS" hide-back-button='true'>
+    <ion-content lazy-scroll overflow-scroll="true">
+        <div class="wrapper">
+            <div class="content discover-page">
+                <article class="article-container" ng-repeat="item in items.slice(0,1)">
+                    <section class="product">
+                        <figure class="prod-img">
+                            <img ng-src={{replaceTextOnModelImage(item.field_image.uri)}} alt="" title="{{item.node_title}} ">
+                            <section class="banner_intro">
+                                <div class="titleHeading">{{item.node_title}}</div>
+                                <h1>{{item.node_title}}</h1>
+                                <h6>{{item.node_title}}</h6>
+                            </section>
+                            <!--  <figure class="prod-img">
+                            <img src="img/anapolis.jpg" alt="{{item.field_product_image.title}}" title="">
+                        </figure> -->
+                            <a class="cart-val" href="#"><img src="img/cart_img.png" alt="{{item.field_product_image.title}}" title="" /></a>
+                            <section class="social-buttons">
+                                <a class="like" href="#" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                </a>
+                                <!--   <a class="like" href="#"><img src="img/thumb.png" alt="{{item.field_product_image.title}}" title=""></a> -->
+                                <a class="share">
+                                    <i class="icon ion-android-share-alt" onclick="window.plugins.socialsharing.share(null, null, 'https://s3-eu-west-1.amazonaws.com/rbi-blogs/wp-content/uploads/mt/flightglobalweb/blogs/aircraft-pictures/assets_c/2012/11/Colombian-Hercules.-jpg-thumb-560x373-168436.jpg', null)" ng-click="showLoader()"></i></a>
+                            </section>
+                    </section>
+                    <!--  <ul>
+                       <li ng-repeat="x in items" class={{categoryWidth(item.field_feed_categories.tid)}} >
+                            <a ui-sref='app.model-says({nid:item.nid})' rel={{item.node_title}}>
+                                <img src= {{replaceTextOn(item.field_image.uri)}}  alt="" title="{{item.node_title}} "></a> 
+
+{{item.field_image.uri}}
+<br>
+{{item.node_title}}
+<br>
+{{item.body.value}}
+
+                        </li>
+                    </ul> -->
+                    <!-- <figure class="banner">
+                        <img ng-src={{replaceTextOnModelImage(item.field_image.uri)}} alt="" title="{{item.node_title}} ">
+                       <img src="{{item.field_image.uri}}" alt="" title="{{item.node_title}}"> 
+                        <section class="banner_intro">
+                            <div class="titleHeading">{{item.node_title}}</div>
+                            <h1>{{item.node_title}}</h1>
+                            <h6>{{item.node_title}}</h6>
+                        </section>
+                    </figure>-->
+                    <section class="social-buttons">
+                        <a class="like" ng-class="{'spinImage': isActive{{item.nid}}}">
+                            <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.nid}})"></i>
+                            <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.nid}})"></i>
+                        </a>
+                        <a class="share">
+                            <i class="icon ion-android-share-alt" ng-click="showLoader()"></i></a>
+                    </section>
+                    <p>{{item.body.value}}</p>
+                    <!-- <a href="#"><span>+</span> Continue Reading</a> -->
+                </article>
+                <section class="article removeMargin" ng-hide='items.length == 1'>
+                    <ul>
+                        <li ng-repeat="item in items" ng-class="{'spinImage': isActive{{item.commerce_product_field_data_field_product_choice_product_id}}}">
+                            <!-- ng-click="select(datalist)" ng-class="{active: isActive(datalist)}" -->
+                            <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.commerce_product_field_data_field_product_choice_product_id}})}">
+                                <div class="addToProject" ng-click="showButtonBox({{item.commerce_product_field_data_field_product_choice_product_id}})">Add to Project</div>
+                                <div class="addToCart" ng-click="showButtonBox({{item.commerce_product_field_data_field_product_choice_product_id}})">Add to Cart</div>
+                                <a class="dots dotsWhite" ng-click="showButtonBox({{item.commerce_product_field_data_field_product_choice_product_id}})"></a>
+                            </div>
+                            <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.commerce_product_field_data_field_product_choice_product_id}})"></i>
+                            <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.commerce_product_field_data_field_product_choice_product_id}})"></i>
+                            <!-- <a class="heart-img">
+                                <img src="img/like.png" alt="" title="" /></a> -->
+                            <figure class="prod-img" ui-sref='app.product-detail({product_id:item.commerce_product_field_data_field_product_choice_product_id})'>
+                                <img image-lazy-src={{replaceTextOnModelImage(item.Product_image.uri)}} alt="" title="{{item.Product_image.title}} " image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="100"></figure>
+                            <span>{{item.commerce_product_field_data_field_product_choice_title}} </span>
+                            <span>Rs.{{item.Product_price}}</span>
+                            <a class="dots" ng-click="showButtonBox({{item.commerce_product_field_data_field_product_choice_product_id}})"></a>
+                        </li>
+                    </ul>
+                </section>
+                <!--  <ul>
+                        <li ng-repeat="item in items">
+                            <a ui-sref='app.product-detail({product_id:item.commerce_product_field_data_field_product_choice_product_id})'>
+                                <figure><img src="{{replaceTextOnModelImage(item.Product_image.uri)}}" alt="{{item.Product_image.title}}" title=""></figure>
+                                <span>{{item.commerce_product_field_data_field_product_choice_title}} 
+                                <span>Rs.{{item.Product_price}}</span></span>
+                            </a>
+                        </li> -->
+                <!--     <li>
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-1.jpg" alt="" title=""></figure><span>Lorem Ipsum is simply<span>Rs.1500</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border">
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-2.jpg" alt="" title=""></figure><span>Lorem Ipsum is simply<span>Rs.1500</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-3.jpg" alt="" title=""></figure><span>Lorem Ipsum is simply<span>Rs.1500</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border">
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-4.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.15,000</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border full_width">
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-5.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.15,000</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-6.jpg" alt="" title=""></figure><span>Lorem Ipsum is simply<span>Rs.1500</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border">
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-7.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.15,000</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border full_width">
+                            <section class="profile_related">
+                                <span class="invoted">“</span>
+                                <p>A brand that I love must follow the narrative of my personal life. After all, they are incredible visual cues that give us a peek into the inner wants and desires of the owner.</p>
+                                <figure class="display_pic"><img src="img/dp.png" alt="" title=""></figure>
+                            </section>
+                        </li>
+                        <li>
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-8.jpg" alt="" title=""></figure><span>Lorem Ipsum is simply<span>Rs.1500</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border">
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-9.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.15,000</span></span>
+                            </a>
+                        </li> -->
+                <!--   </ul> -->
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

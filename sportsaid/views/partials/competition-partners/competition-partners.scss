@@ -1,0 +1,72 @@
+.module--competition-partners {
+    background-color:$light-gray;
+	.competition-partners-wrap{
+        text-align: center;		
+
+		figure {
+        @include transition(opacity 300ms linear);
+        margin:0 auto;
+        opacity:0;
+        padding:15px;
+        float: none;
+        display: inline-block;
+        img{
+                    max-width:150px;
+                    width:100%;
+                    @media screen and (max-width: $screen-lg){
+                max-width:140px;
+            }
+                    @media screen and (max-width: $screen-sm){
+                max-width:150px;
+            }
+
+        }
+     //    @media screen and(min-width:500px){
+     //     float:left;
+     //     width:50%;
+     //    }
+        // @media screen and (min-width:$screen-sm){
+        //  width:33.33%;
+        // }
+        // @media screen and (min-width:960px){
+        //  width:25%;
+        // }
+        // @media screen and (min-width:$screen-lg){
+        //  width:20%;
+        // }
+        &.in {
+            opacity:1;
+        }
+        @media screen and (min-width:$screen-lg){
+        //  width:20%;
+        // }
+        
+        a {
+            display:block;
+            height:220px;
+            text-align:center;
+            width:100%;
+        }
+    }
+   }
+		
+		.heading
+		{
+			text-transform: uppercase;
+		}
+    	h2{
+    		text-align:center;
+    	}
+    	p{
+    		@media screen and (max-width: $screen-sm){
+    			padding:0 3%;
+    		}
+    		@media screen and (min-width: $screen-sm){
+    			padding:0 7%;
+    		}
+    		@media screen and (min-width: $screen-md){
+    			padding:0;
+    		}
+    	}
+	}
+}

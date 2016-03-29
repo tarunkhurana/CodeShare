@@ -1,0 +1,14 @@
+<ion-view view-title="address" hide-back-button='true'>
+    <ion-content on-scroll="scrolling=true">
+        <section class="paymentPage">
+            <div class="confirmThanks">
+                <h1>Order Successfully Placed!</h1>
+                <h2>Your order is: 500005178.</h2>
+                <p>Your order is currently being processed. You will receive an order confirmation email shortly with the expected delivery date for your item.</p>
+                <button class="button button-block  button-dark buttonActive" type="button">continue shopping</button>
+            </div>
+        </section>
+        <div class="boxTopShadow"></div>
+        <div ng-include="'modules/cart/summary/summary.html'" ng-controller="CartSummaryCtrl" class="cart-summary-wrapper"></div>
+    </ion-content>
+</ion-view>

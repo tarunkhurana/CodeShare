@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'HelveticaRegular';
+    src: url($path-asset+'fonts/helvetica-webfont.eot');
+    src: url($path-asset+'fonts/helvetica-webfont.eot?#iefix') format('embedded-opentype'),
+         url($path-asset+'fonts/helvetica-webfont.woff') format('woff'),
+         url($path-asset+'fonts/helvetica-webfont.ttf') format('truetype'),
+         url($path-asset+'fonts/helvetica-webfont.svg#HelveticaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica-Bold';
+  src: url($path-asset+'fonts/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),  
+  url($path-asset+'fonts/Helvetica-Bold.woff') format('woff'), 
+  url($path-asset+'fonts/Helvetica-Bold.ttf')  format('truetype'), 
+  url($path-asset+'fonts/Helvetica-Bold.svg#Helvetica-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'prismregular';
+    src: url($path-asset+'fonts/prism-regular-webfont.eot');
+    src: url($path-asset+'fonts/prism-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url($path-asset+'fonts/prism-regular-webfont.woff2') format('woff2'),
+         url($path-asset+'fonts/prism-regular-webfont.woff') format('woff'),
+         url($path-asset+'fonts/prism-regular-webfont.ttf') format('truetype'),
+         url($path-asset+'fonts/prism-regular-webfont.svg#prismregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LubalinGraphStd-Bold';
+    src: url($path-asset+'fonts/2EDB3D_0_0.eot');
+    src: url($path-asset+'fonts/2EDB3D_0_0.eot?#iefix') format('embedded-opentype'),
+    url($path-asset+'fonts/2EDB3D_0_0.woff2') format('woff2'),
+    url($path-asset+'fonts/2EDB3D_0_0.woff') format('woff'),
+    url($path-asset+'fonts/2EDB3D_0_0.ttf') format('truetype');
+}
+
+$helvetica-regular:"HelveticaRegular", Arial, sans-serif;
+$helvetica-bold:"Helvetica-Bold", Arial, sans-serif;
+$prism:"prismregular", Arial, sans-serif;
+$lubalin-graphStd-m:"LubalinGraphStd-Bold", Arial, sans-serif;

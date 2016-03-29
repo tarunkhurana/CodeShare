@@ -1,0 +1,92 @@
+h1{
+	font:72px/62px $prism;
+	color:$dark-blue;
+	font-weight:normal;
+	margin-top: 0;
+}
+h2{
+	font:34px/36px $lubalin-graphStd-m;
+	color:$dark-blue;
+	text-transform:uppercase;
+	font-weight:normal;
+	margin: 0 0 40px 0;
+}
+
+h3{
+	font:24px/34px $helvetica-bold;
+	color:$dark-gray;
+	margin: 40px 0 20px 0;
+}
+h4{
+	font:24px/34px $helvetica-bold;
+	color:$dark-blue;
+	margin: 20px 0;
+}
+h5{
+	font:20px/22px $helvetica-regular;
+	color:$dark-blue;
+}
+p {
+	font:18px/26px $helvetica-regular;
+	color:$dark-gray;
+	margin: 0 0 20px 0;
+}
+li,
+figcaption {
+	font:18px/26px $helvetica-regular;
+	color:$dark-gray;
+}
+@media screen and (max-width: 1024px) {
+
+}
+@media screen and (max-width: 992px) {
+	h1{
+		font:57px/57px $prism;
+	}
+	h2{
+		font:32px/38px $lubalin-graphStd-m;
+	}
+	h3{
+		font:20px/30px $helvetica-bold;
+	}
+	h4 {
+		font:22px/24px $helvetica-bold;
+	}
+	h5{
+		font:18px/20px $helvetica-regular;
+	}
+	p{
+		font:16px/26px $helvetica-regular;
+	}
+}
+@media screen and (max-width: 767px) {
+	body {
+		-webkit-text-size-adjust: auto;
+	}
+	h1{
+		font:35px/31px $prism;
+	}
+	h2{
+		font:25px/26px $lubalin-graphStd-m;
+	}
+	h3 {
+		font:17px/24px $helvetica-bold;
+	}
+	h4 {
+		font:22px/24px $helvetica-bold;
+	}
+	h5{
+		font:15px/17px $helvetica-regular;
+	}
+	h6{
+		font:14px/16px $helvetica-bold;
+	}
+	p {
+		font:15px/22px $helvetica-regular;
+	}
+}
+@media screen and (max-width: 479px) {
+	h3 {
+		font:17px/24px $helvetica-bold;
+	}
+}

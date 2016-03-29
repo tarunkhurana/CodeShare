@@ -1,0 +1,74 @@
+<ion-view view-title="DISCOVER" hide-back-button='true'>
+    <ion-content>
+        <div class="wrapper">
+            <div class="content discover-page">
+                <nav class="sort-filter">
+                    <ul>
+                        <li><a class="sort" href="#">sort</a></li>
+                        <li><a class="filter" href="#">filter</a></li>
+                    </ul>
+                </nav>
+                <section class="article">
+                    <ul>
+                        <li ng-repeat="x in items" class={{x.product_id}}>
+                        <a class="heart-img" href=""><img src="img/like.png" alt="" title="" /></a>
+                            <!-- <a ui-sref='app.{{modelName(x.field_feed_categories.tid)}}({nid:x.nid})' rel={{x.node_title}}>
+                             -->
+                           <!--  <a ui-sref='app.model-says({nid:x.nid})' rel={{x.node_title}}> -->
+                                <figure class="prod-img"><img src={{replaceTextOn(x.field_product_image.uri)}} alt="" title="{{x.field_product_image.title}} "></figure>
+                                <span>{{replaceTextOn(x.field_product_image.title)}}</span>
+                               <span>{{replaceTextOn(x.commerce_price)}}</span>
+                                <!-- </a> -->
+                                <a class="dots" href="#"></a>
+                        </li> 
+                       
+                    </ul>
+                    
+                    <!-- <ul>
+                        <li class="full_width">
+                            <a href="#/app/product-detail">
+                                <figure><img src="img/product-img.jpg" alt="" title=""></figure>
+                                <span>Thiene Sofa<br>(Camel Italian Leather)<span>Rs.104,999</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="img/prod_img1.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.34,000</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border">
+                            <a href="#">
+                                <figure><img src="img/prod_img2.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.15,000</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="img/prod_img3.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.3245</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border">
+                            <a href="#">
+                                <figure><img src="img/prod_img4.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.4500</span></span>
+                            </a>
+                        </li>
+                        <li class="full_width">
+                            <a href="#">
+                                <figure><img src="img/prod_img7.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.3245</span></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="img/prod_img5.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs.3245</span></span>
+                            </a>
+                        </li>
+                        <li class="no_border">
+                            <a href="#">
+                                <figure><img src="img/prod_img6.jpg" alt="" title=""></figure><span>Lorem ipsum<span>Rs. 4500</span></span>
+                            </a>
+                        </li>
+                    </ul> -->
+                </section>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,211 @@
+<ion-view view-title="DISCOVER" hide-back-button='true'>
+    <ion-content delegate-handle="mainScroll">
+        <div class="wrapper">
+            <div class="content discover-page discoverProduct">
+                <section class="discoverItems" ng-show='itemsChair.length>0'>
+                    <h5>chair</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal1" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsChair.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsChair" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+                <section class="discoverItems" ng-show='itemsSofa.length>0'>
+                    <div class="boxTopShadow"></div>
+                    <h5>SOFA</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal2" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsSofa.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsSofa" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+                <section class="discoverItems" ng-show='itemsBed.length>0'>
+                    <div class="boxTopShadow"></div>
+                    <h5>Bed</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal3" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsBed.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsBed" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+                <section class="discoverItems" ng-show='itemsTable.length>0'>
+                    <div class="boxTopShadow"></div>
+                    <h5>Table</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal4" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsTable.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsTable" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+                <section class="discoverItems" ng-show='itemsHomedecor.length>0'>
+                    <h5>Home decor</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal5" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsHomedecor.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsHomedecor" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+                <section class="discoverItems" ng-show='itemsLighting.length>0'>
+                    <div class="boxTopShadow"></div>
+                    <h5>Lighting</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal6" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsLighting.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsLighting" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+                <section class="discoverItems" ng-show='itemsRugs.length>0'>
+                    <div class="boxTopShadow"></div>
+                    <h5>Rugs</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal7" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsRugs.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsRugs" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+                <section class="discoverItems" ng-show='itemsHometextile.length>0'>
+                    <div class="boxTopShadow"></div>
+                    <h5>Home textile</h5>
+                    <ion-scroll class="wide-as-needed" direction="x" zooming="false" delegate-handle="horizontal8" horizontal-scroll-fix="mainScroll">
+                        <section class="article articleWide" style='width:{{(itemsHometextile.length*175)}}px'>
+                            <ul>
+                                <li ng-repeat="item in itemsHometextile" ng-class="{'spinImage': isActive{{item.product_id}}}">
+                                    <div class="boxSkin" ng-class="{'showBoxSkin': isActiveBox({{item.product_id}})}">
+                                        <div class="addToProject" ng-click="showButtonBox({{item.product_id}})">Add to Project</div>
+                                        <div class="addToCart" ng-click="showButtonBox({{item.product_id}})">Add to Cart</div>
+                                        <a class="dots dotsWhite" ng-click="showButtonBox({{item.product_id}})"></a>
+                                    </div>
+                                    <i class="ion-ios-heart heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <i class="ion-ios-heart-outline heart-img" ng-click="flipImage({{item.product_id}})"></i>
+                                    <figure class="prod-img" ui-sref='app.product-detail({product_id:item.product_id})'>
+                                        <img src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} ">
+                                        </figure>
+                                    <span>{{item.commerce_product_title}}</span>
+                                    <span>{{item.commerce_price}}</span>
+                                    <a class="dots" ng-click="showButtonBox({{item.product_id}})"></a>
+                                </li>
+                            </ul>
+                        </section>
+                    </ion-scroll>
+                </section>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>
+
+
+
+
+<!-- <img image-lazy-src={{replaceTextOnModelImage(item.field_product_image.uri)}} alt="" title="{{item.field_product_image.title}} " image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="100"> -->
